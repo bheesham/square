@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://retrospective/root.gd" type="Script" id=1]
+[ext_resource path="res://retrospective/accuracy.gd" type="Script" id=2]
+[ext_resource path="res://retrospective/retryBtn.gd" type="Script" id=3]
+
+[node name="root" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="accuracy" type="Label" parent="."]
+margin_left = 88.5295
+margin_top = 40.2958
+margin_right = 730.529
+margin_bottom = 269.296
+rect_pivot_offset = Vector2( -256.132, 82.513 )
+align = 1
+valign = 1
+clip_text = true
+script = ExtResource( 2 )
+
+[node name="retryBtn" type="Button" parent="."]
+margin_left = 404.0
+margin_top = 378.0
+margin_right = 504.0
+margin_bottom = 478.0
+text = "retry"
+script = ExtResource( 3 )
+[connection signal="pressed" from="retryBtn" to="retryBtn" method="_on_retryBtn_pressed"]
